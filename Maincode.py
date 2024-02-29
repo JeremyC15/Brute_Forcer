@@ -2,7 +2,7 @@ import paramiko, os, socket, termcolor, sys
 
 
 
-host = input(termcolor.colored(("Enter target website:"), color = "cyan"))
+host = input("Enter target website:")
 user = input("Enter username:")
 password = input("Enter the passwords file:")
 
@@ -26,7 +26,7 @@ def ssh_connect(p, code = 0):
   return code
 
 if not os.path.exists(password):
-  print(termcolor.colored(("File not found or incorrect path!"), color='light_blue'))
+  print(termcolor.colored(("File not found or incorrect path!"), color='red'))
   sys.exit(1)
 
 
